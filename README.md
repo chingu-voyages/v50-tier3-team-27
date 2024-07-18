@@ -35,7 +35,7 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Jessica Lane: [GitHub](https://github.com/jesslane94) / [LinkedIn](https://www.linkedin.com/in/jessicalane9794/)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Teammate name #2: [GitHub](https://github.com/lucascostamonteiro) / [LinkedIn](https://linkedin.com/in/lucascostamonteiro)
 
   ...
 
