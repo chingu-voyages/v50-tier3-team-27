@@ -1,12 +1,12 @@
 {
-    "name": "plant-app",
+    "name": "vite-react-express-app",
     "version": "1.0.0",
     "scripts": {
         "start": "concurrently \"npm run server\" \"npm run client\"",
         "server": "cd backend && node index.js",
-        "client": "cd frontend && npm run dev"
+        "client": "cd 'frontend / Plant App' && npm run dev"
     },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+    "devDependencies": {
+        "concurrently": "^6.2.0"
+    }
 }
