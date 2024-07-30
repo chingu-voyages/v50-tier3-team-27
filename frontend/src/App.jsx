@@ -9,20 +9,12 @@ import './App.css';
 function App() {
   return (
     <>
+      <NavBar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <NavBar />
-              <Outlet />
-            </>
-          }
-        >
-          <Route index element={<LandingPage />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="/plants/:id" element={<PlantDetails />} />
-        </Route>
+        <Route path="/" element={<Outlet />} />
+        <Route index element={<LandingPage />} />
+        <Route path="/results" element={<Results />} />
+        <Route path="/plants/:id" element={<PlantDetails />} />
       </Routes>
     </>
   );
