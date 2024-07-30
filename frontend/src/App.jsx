@@ -1,26 +1,29 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import Results from './pages/Results/Results';
+import NavBar from './components/NavBar';
+import { Outlet } from 'react-router';
 import './App.css';
-import { LandingPage } from './pages/landingPage';
-import { Navbar } from './NavBar'
-import { Outlet } from 'react-router'
 
 function App() {
   return (
-      <BrowserRouter>
-        <Routes>
+    <>
+      <Routes>
         <Route
-            element={
-              <>
-                <Navbar />
-                <Outlet />
-              </>
-            }
-          >
-          <Route path='/' element={<LandingPage />} />
-          </Route>
-          </Routes>
-      </BrowserRouter>
-  )
+          path="/"
+          element={
+            <>
+              <NavBar />
+              <Outlet />
+            </>
+          }
+        >
+          <Route index element={<LandingPage />} />
+          <Route path="results" element={<Results />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
