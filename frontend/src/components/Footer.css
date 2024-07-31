@@ -1,0 +1,13 @@
+.main-footer {
+    color: white;
+    background-color:#f95a39;
+    padding-top: 8px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
+  }
+
+.col-sm {
+  padding-bottom: 1em;
+  }
