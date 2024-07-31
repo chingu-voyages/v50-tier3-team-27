@@ -24,6 +24,7 @@ function App() {
           <Route path="/plants/:id" element={<PlantDetails />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }
