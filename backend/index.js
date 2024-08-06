@@ -10,3 +10,14 @@ app.get("/api", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+// for when we eventually set up a database
+/* const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/your_database_name", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+ */
+
+// possible example call, may want to use axios
+BASE_URL = "https://perenual.com/api/"
