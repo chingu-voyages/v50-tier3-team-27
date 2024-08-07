@@ -40,6 +40,7 @@ const LandingPage = () => {
         <div>See Plant Species</div>
         <div>Find Out What Species Your Plant Attracts</div>
       </div>
+      <p></p>
     </>
   )
 }
