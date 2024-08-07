@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import './PlantItem.css'
 
 const PlantItem = ({ item }) => {
-    // console.log('ITEM: ', item);
+    console.log(item)
     return (
         <div className="plant-item-container">
             <div className="plant-item-image-container">
-                <img src={item?.imageUrl} alt="plant item" className="plant-item-image" />
+                <img src={item.default_image.thumbnail} alt="plant item" className="plant-item-image" />
             </div>
             <div>
-                <h2 className="plant-item-name">{item.name}</h2>
+                <h2 className="plant-item-name">{item.common_name}</h2>
                 <Link
                     to={`/plants/${item.id}`}
                     className="plant-item-link"
