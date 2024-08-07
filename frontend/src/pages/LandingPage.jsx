@@ -1,24 +1,8 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../context";
 
 const LandingPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-  const navigate = useNavigate();
-
-  const apiKey = import.meta.env.VITE_API_KEY;
-
-  const handleSearch = async () => {
-    try {
-      const response = await fetch(`https://perenual.com/api/species-list?key=${apiKey}&q=${searchTerm}`);
-      const data = await response.json();
-      setSearchResults(data.data)
-    } catch (e) {
-      console.error("Error fetching data:", e);
-    }
-  };
-
-
+  const { searchTerm, setSearchTerm, handleSearch } = useContext(GlobalContext)
   return (
     <>
       <h1> Welcome to the Plant Manager! </h1>

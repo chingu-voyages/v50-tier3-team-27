@@ -16,7 +16,7 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/plants/:id" element={<PlantDetails />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
