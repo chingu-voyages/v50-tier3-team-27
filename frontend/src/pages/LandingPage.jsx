@@ -1,10 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
 
-  const handleSearch = () => {
-    console.log("Search Term:", searchTerm);
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(`https://perenual.com/api/species-list?key=${apiKey}&q=${searchTerm}`);
+      const data = await response.json();
+      setSearchResults(data.data)
+    } catch (e) {
+      console.error("Error fetching data:", e);
+    }
   };
 
 
