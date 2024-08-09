@@ -1,11 +1,12 @@
 .main-footer {
     color: white;
-    background-color:#f95a39;
-    padding-top: 8px;
+    background-color:#4CAF50;
+    border-radius: 5px;
+    padding-top: 6px;
     position: static;
     width: 100%;
     bottom: 0;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
 .col-sm {

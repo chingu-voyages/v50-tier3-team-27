@@ -1,18 +1,15 @@
+import './ViewAllPlants.css'
 import PlantItem from "../../components/PlantItem/PlantItem";
-// import flowerDetails from "../../dummyData";
-import './Results.css'
 import { useContext } from "react";
 import { GlobalContext } from "../../context";
 
-
-const Results = () => {
-    const { searchResults, searchTerm } = useContext(GlobalContext);
-    console.log(searchResults)
+const ViewAllPlants = () => {
+    const { handleAllPlants, allPlants } = useContext(GlobalContext);
+    handleAllPlants();
     return (
         <>
-            <h3 className="results-title">Results for { searchTerm }</h3>
             <div className="results-container">
-                {searchResults.map(item => (
+                {allPlants.map(item => (
                     <PlantItem key={item.id} item={item} />
                 ))}
             </div>
@@ -20,4 +17,4 @@ const Results = () => {
     );
 };
 
-export default Results;
+export default ViewAllPlants;
